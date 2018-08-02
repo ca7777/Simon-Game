@@ -1,5 +1,6 @@
 body{
   background: #000016;
+
 }
 
 h1{
@@ -10,10 +11,9 @@ h1{
 
 .button-layout{
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 33%;
   z-index: 1;
-  
   background: #020202;
   width: 820px;
   height: 820px;
@@ -45,26 +45,26 @@ h1{
 }
 
 #redButton{
-  background: url("https://image.ibb.co/haJn5H/simon_red_off.png");
+  background: url("../img/simon_red_off.png");
   background-size: 100%;
   background-repeat: no-repeat;
   } 
 
 #blueButton{
-  background: url("https://image.ibb.co/g8HQsx/simon_blue_off.png");  
+  background: url("../img/simon_blue_off.png");  
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 #greenButton{
-  background: url("https://image.ibb.co/nx3LQH/simon_green_off.png");
+  background: url("../img/simon_green_off.png");
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 
 #yellowButton{
-  background: url("https://image.ibb.co/bLUukH/simon_yellow_off.png"); 
+  background: url("../img/simon_yellow_off.png"); 
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -93,21 +93,21 @@ h1{
 
 
 .yellowButton-active{
-  background: url("https://image.ibb.co/nmFBXx/simon_yellow_on.png") !important;
+  background: url("../img/simon_yellow_on.png") !important;
   background-size: contain !important;
 }
 
 .redButton-active{
-  background: url("https://image.ibb.co/f3TWXx/simon_red_on.png") !important;
+  background: url("../img/simon_red_on.png") !important;
   background-size: contain !important;
 }
 
 .blueButton-active{
-  background: url("https://image.ibb.co/dCaZkH/simon_blue_on.png")  !important;
+  background: url("../img/simon_blue_on.png")  !important;
   background-size: contain !important;
 }
 .greenButton-active{
-  background: url("https://image.ibb.co/hCL0QH/simon_green_on.png") !important;
+  background: url("../img/simon_green_on.png") !important;
   background-size: contain !important;
 }
 
@@ -150,7 +150,7 @@ h1{
 .hi-score-btn{
   position: relative;
   z-index: 6;
-  background-image: url("https://image.ibb.co/jKZGzc/hi_score_button.png");
+  background-image: url("../img/hi_score_button.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 260%;
@@ -161,7 +161,7 @@ h1{
 }
 
 .hi-score-btn-active{
- background: url("https://image.ibb.co/mPoyCx/hi_score_button_pressed.png") !important;
+ background: url("../img/hi_score_button_pressed.png") !important;
   background-size: cover !important;
   padding-top:70% !important;
   padding-left: 4% !important;
@@ -169,7 +169,7 @@ h1{
 }
 
 #diffSlider{
-  background: url("https://image.ibb.co/fN4Gzc/toggle_off.png"); 
+  background: url("../img/toggle_off.png"); 
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -177,13 +177,13 @@ h1{
 }
 
 .diffSlider-med{
-  background: url("https://image.ibb.co/f6nQsx/toggle_mid.png") !important;  
+  background: url("../img/toggle_mid.png") !important;  
   background-size: contain !important;
   background-repeat: no-repeat !important;
 }
 
 .diffSlider-hard{
-  background: url("https://image.ibb.co/mQVpKc/toggle_on.png") !important;
+  background: url("../img/toggle_on.png") !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
 }
