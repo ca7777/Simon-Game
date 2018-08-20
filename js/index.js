@@ -25,6 +25,7 @@ var strictMode = false;
 var gameOn = false;
 var diffTimer = 1010;
 var hiScore = 0;
+var isReady = true;
 
 function play(audio) {
     if (audio.paused) {
@@ -43,7 +44,7 @@ function beepboop(move) {
 
   $(buttons[move][0]).addClass(buttons[move][2]);
 
-  var stopThat = setTimeout(function() {
+  setTimeout(function() {
     $(buttons[move][0]).removeClass(buttons[move][2]);
   }, (diffTimer - 110))
 }
@@ -53,7 +54,7 @@ function shortboop(move) {
 
   $(buttons[move][0]).addClass(buttons[move][2]);
 
-  var stopThat = setTimeout(function() {
+  setTimeout(function() {
     $(buttons[move][0]).removeClass(buttons[move][2]);
   }, 200);
 }
@@ -65,6 +66,9 @@ function setPattern() {
 }
 
 function simonSays() {
+	
+  isReady = false;
+  
   for (var i = 0; i < moveArr.length; i++) {
     let thisMove = moveArr[i];
     setTimeout(function() {
@@ -75,15 +79,25 @@ function simonSays() {
   setTimeout(function() {
     setPattern();
   }, diffTimer * moveArr.length + 1);
+	
+  setTimeout(function() {
+		isReady = true;
+	}, 1000 * (moveArr.length + 2));	
 }
 
 function nowYouSay(val) {
-  
   playArr.push(val);
-
+	
+  if (isReady === false){
+	playArr = [];  
+  }
+	
+	
+	
   if (val !== moveArr[turn]) {
-    if (strictMode === false) {
+    if (strictMode === false && isReady === true) {
       loseSnd.play();
+	  isReady = false;
       playArr = [];
       turn = 0;
       setTimeout(function() {
@@ -94,6 +108,11 @@ function nowYouSay(val) {
           }, diffTimer * i);
         }
       }, 1000);
+		
+	setTimeout(function() {
+		isReady = true;
+	}, 1000 * (moveArr.length + 1));
+	
     }
    else if (strictMode === true) {
     if (score > hiScore){ hiScore = score; }
@@ -117,11 +136,19 @@ function nowYouSay(val) {
       simonSays();
       turn = 0;
     }, 1000);
+		
+	setTimeout(function() {
+		isReady = true;
+	}, 1000 * (moveArr.length + 1));
     }
   } else {
     turn ++;
   }
 
+  setTimeout(function() {
+		isReady = true;
+	}, 1000 * (moveArr.length + 1));
+	
 }
 
 function resetGame() {
